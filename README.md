@@ -12,7 +12,7 @@ The easiest way is to keep `wdio-screenshots-cleanup-service` as a devDependency
 ```json
 {
   "devDependencies": {
-    "wdio-screenshots-cleanup-service": "~0.0.1"
+    "wdio-screenshots-cleanup-service": "~0.0.3"
   }
 }
 ```
@@ -29,8 +29,7 @@ Instructions on how to install `WebdriverIO` can be found [here.](http://webdriv
 
 ```js
 // wdio.conf.js
-var WdioScreenshotsCleanupService = require('./src/service/wdio-screenshots-cleanup-service').WdioScreenshotsCleanupService
-
+var WdioScreenshotsCleanupService = require('wdio-screenshots-cleanup-service').WdioScreenshotsCleanupService
 var screenshotsCleanupService = new WdioScreenshotsCleanupService()
 
 export.config = {
