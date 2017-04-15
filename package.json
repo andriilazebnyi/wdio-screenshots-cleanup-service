@@ -1,11 +1,11 @@
 {
   "name": "wdio-screenshots-cleanup-service",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WebdriverIO service to cleanup screenshots folder before tests run",
   "main": "./lib/wdio-screenshots-cleanup-service.js",
   "scripts": {
     "build": "tsc",
-    "prepublish": "npm prune && npm build"
+    "prepublish": "npm prune && npm run build"
   },
   "repository": {
     "type": "git",
