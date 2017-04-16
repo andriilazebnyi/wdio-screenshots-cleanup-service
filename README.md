@@ -12,7 +12,7 @@ The easiest way is to keep `wdio-screenshots-cleanup-service` as a devDependency
 ```json
 {
   "devDependencies": {
-    "wdio-screenshots-cleanup-service": "~0.0.3"
+    "wdio-screenshots-cleanup-service": "~0.0.5"
   }
 }
 ```
