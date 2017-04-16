@@ -6,7 +6,7 @@ type Config = {
   screenshotPath: string
 }
 
-export class WdioScreenshotsCleanupService {
+export default class WdioScreenshotsCleanupService {
   onPrepare(config: Config) {
     return new Promise(resolve => {
       const screenshotsFolder = path.isAbsolute(config.screenshotPath)

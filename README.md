@@ -29,12 +29,9 @@ Instructions on how to install `WebdriverIO` can be found [here.](http://webdriv
 
 ```js
 // wdio.conf.js
-var WdioScreenshotsCleanupService = require('wdio-screenshots-cleanup-service').WdioScreenshotsCleanupService
-var screenshotsCleanupService = new WdioScreenshotsCleanupService()
-
 export.config = {
   // ...
-  services: [screenshotsCleanupService],
+  services: ['screenshots-cleanup'],
   // ...
 };
 ```
