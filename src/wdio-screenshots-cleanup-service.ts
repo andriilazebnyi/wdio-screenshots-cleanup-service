@@ -8,7 +8,7 @@ type Config = {
 
 export default class WdioScreenshotsCleanupService {
   onPrepare(config: Config) {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       const screenshotsFolder = path.isAbsolute(config.screenshotPath)
         ? config.screenshotPath
         : path.join(process.cwd(), config.screenshotPath)
@@ -16,8 +16,10 @@ export default class WdioScreenshotsCleanupService {
       fs.exists(screenshotsFolder, exists => {
         if (exists) {
           rimraf(screenshotsFolder, (err: Error) => {
-            if (err)
+            if (err) {
               console.error(`Failed to delete screenshots folder: ${screenshotsFolder}`, err)
+              return reject(err)
+            }
           })
 
           return resolve()

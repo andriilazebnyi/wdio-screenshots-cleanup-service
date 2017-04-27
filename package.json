@@ -1,6 +1,6 @@
 {
   "name": "wdio-screenshots-cleanup-service",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "WebdriverIO service to cleanup screenshots folder before tests run",
   "main": "./lib/wdio-screenshots-cleanup-service.js",
   "scripts": {
