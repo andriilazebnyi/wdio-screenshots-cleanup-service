@@ -1,9 +1,7 @@
 WDIO Screenshots Cleanup Service
 ============================
 
-> Wdio service to cleanup screenshots folder before tests run.
-
-Path to screenshots folder is being taken form Wdio config `screenshotPath` property. 
+> Wdio service to cleanup screenshots before tests run.
 
 ## Installation
 
@@ -12,7 +10,7 @@ The easiest way is to keep `wdio-screenshots-cleanup-service` as a devDependency
 ```json
 {
   "devDependencies": {
-    "wdio-screenshots-cleanup-service": "~0.0.6"
+    "wdio-screenshots-cleanup-service": "~0.0.7"
   }
 }
 ```
@@ -20,7 +18,7 @@ The easiest way is to keep `wdio-screenshots-cleanup-service` as a devDependency
 You can simple do it by:
 
 ```bash
-npm install wdio-screenshots-cleanup-service --save-dev
+yarn add wdio-screenshots-cleanup-service -D
 ```
 
 Instructions on how to install `WebdriverIO` can be found [here.](http://webdriver.io/guide/getstarted/install.html)
@@ -32,9 +30,18 @@ Instructions on how to install `WebdriverIO` can be found [here.](http://webdriv
 export.config = {
   // ...
   services: ['screenshots-cleanup'],
+  // clean screenshots
+  cleanScreenshotsFolder: {
+    folder: 'screenshots',
+    pattern: '/**/ERROR_*'
+  },
   // ...
 };
 ```
+
+Where:
+  - `folder` is absolute or relative path to your project screenshots folder
+  - `pattern` is optional property to tell `wdio-screenshots-clenup-service` what pattern to apply before deleting screenshots
 
 ## Development
 
@@ -43,7 +50,7 @@ All commands can be found in the package.json. The most important are:
 Build package:
 
 ```sh
-$ npm build
+$ yarn build
 ```
 
 ----

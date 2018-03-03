@@ -1,11 +1,10 @@
 {
   "name": "wdio-screenshots-cleanup-service",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "WebdriverIO service to cleanup screenshots folder before tests run",
   "main": "./lib/wdio-screenshots-cleanup-service.js",
   "scripts": {
-    "build": "rm -rf ./lib && tsc",
-    "prepublish": "npm prune && npm run build"
+    "build": "rm -rf ./lib && tsc"
   },
   "repository": {
     "type": "git",
@@ -28,12 +27,12 @@
   },
   "homepage": "https://github.com/andriilazebnyi/wdio-screenshots-cleanup-service#readme",
   "dependencies": {
-    "rimraf": "^2.6.1"
+    "rimraf": "2.6.2"
   },
   "devDependencies": {
-    "@types/node": "^7.0.12",
-    "@types/rimraf": "0.0.28",
-    "typescript": "^2.2.2"
+    "@types/node": "^8.5.2",
+    "@types/rimraf": "^2.0.2",
+    "typescript": "^2.6.2"
   },
   "contributors": [
     "Andrii Lazebnyi <lazebniy.a@gmail.com>"
